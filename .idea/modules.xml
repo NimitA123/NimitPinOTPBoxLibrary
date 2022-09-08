@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/BigOhOTP.iml" filepath="$PROJECT_DIR$/.idea/modules/BigOhOTP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/OTPModule/BigOhOTP.OTPModule.iml" filepath="$PROJECT_DIR$/.idea/modules/OTPModule/BigOhOTP.OTPModule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/OTPModule/BigOhOTP.OTPModule.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/OTPModule/BigOhOTP.OTPModule.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/OTPModule/BigOhOTP.OTPModule.main.iml" filepath="$PROJECT_DIR$/.idea/modules/OTPModule/BigOhOTP.OTPModule.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/OTPModule/BigOhOTP.OTPModule.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/OTPModule/BigOhOTP.OTPModule.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/BigOhOTP.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/BigOhOTP.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/BigOhOTP.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/BigOhOTP.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/BigOhOTP.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/BigOhOTP.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/BigOhOTP.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/BigOhOTP.app.unitTest.iml" />
+    </modules>
+  </component>
+</project>

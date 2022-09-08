@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "577471845102",
+    "project_id": "bigohotp",
+    "storage_bucket": "bigohotp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:577471845102:android:bdeec9f885ea9beba199ff",
+        "android_client_info": {
+          "package_name": "com.example.bigohotp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "577471845102-25c2vf005n3fmhf3dj7ki66rgkk0ulcm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bigohotp",
+            "certificate_hash": "f6d361d50f489160636ff8c6f7dc799a46d48139"
+          }
+        },
+        {
+          "client_id": "577471845102-c9ou8m88j4j12he40b36k8npg5iv1hce.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCDw7IggUAq-u8RB0XiubXkeapZ56I1I4k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "577471845102-c9ou8m88j4j12he40b36k8npg5iv1hce.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
