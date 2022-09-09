@@ -1,20 +1,4 @@
-/*
- * Copyright 2017 Chaos Leong
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-package com.example.otpmodule;
+package com.nimitagrawal.otpmodule;
 
 import android.animation.ValueAnimator;
 import android.content.Context;
@@ -53,6 +37,8 @@ import androidx.appcompat.widget.AppCompatEditText;
 import androidx.core.content.res.ResourcesCompat;
 import androidx.core.view.ViewCompat;
 
+import com.example.otpmodule.R;
+
 /**
  * Provides a widget for enter PIN/OTP/password etc.
  *
@@ -67,7 +53,7 @@ public class PinView extends AppCompatEditText {
 
     private static final int BLINK = 500;
 
-    private static final int DEFAULT_COUNT = 0;
+    private static final int DEFAULT_COUNT = 4;
 
     private static final InputFilter[] NO_FILTERS = new InputFilter[0];
 
@@ -76,7 +62,8 @@ public class PinView extends AppCompatEditText {
 
     private static final int VIEW_TYPE_RECTANGLE = 0;
     private static final int VIEW_TYPE_LINE = 1;
-    private static final int VIEW_TYPE_NONE = 2;
+    private static final int VIEW_TYPE_CIRCLE = 2;
+    private static final int VIEW_TYPE_NONE = 3;
 
     private int mViewType;
 
@@ -244,16 +231,17 @@ public class PinView extends AppCompatEditText {
     }
 
     private void checkItemRadius() {
-        if (mViewType == VIEW_TYPE_LINE) {
-            float halfOfLineWidth = ((float) mLineWidth) / 2;
+       if (mViewType == VIEW_TYPE_LINE) {
+           /* float halfOfLineWidth = ((float) mLineWidth) / 2;
             if (mPinItemRadius > halfOfLineWidth) {
                 throw new IllegalArgumentException("The itemRadius can not be greater than lineWidth when viewType is line");
-            }
+            }*/
         } else if (mViewType == VIEW_TYPE_RECTANGLE) {
-            float halfOfItemWidth = ((float) mPinItemWidth) / 2;
+            float halfOfItemWidth = ((float) mPinItemWidth) / 12;
             if (mPinItemRadius > halfOfItemWidth) {
                 throw new IllegalArgumentException("The itemRadius can not be greater than itemWidth");
             }
+
         }
     }
 
@@ -273,7 +261,7 @@ public class PinView extends AppCompatEditText {
             // Parent has told us how big to be. So be it.
             width = widthSize;
         } else {
-            int boxesWidth = (mPinItemCount - 1) * mPinItemSpacing + mPinItemCount * mPinItemWidth;
+            int boxesWidth = ( - 1) * mPinItemSpacing + mPinItemCount * mPinItemWidth;
             width = boxesWidth + ViewCompat.getPaddingEnd(this) + ViewCompat.getPaddingStart(this);
             if (mPinItemSpacing == 0) {
                 width -= (mPinItemCount - 1) * mLineWidth;
@@ -391,6 +379,10 @@ public class PinView extends AppCompatEditText {
             } else if (mViewType == VIEW_TYPE_LINE) {
                 drawPinLine(canvas, i);
             }
+            else if(mViewType == VIEW_TYPE_CIRCLE){
+              //  drawPinCircle(canvas, i);
+            }
+
 
             if (DBG) {
                 drawAnchorLine(canvas);
@@ -490,6 +482,21 @@ public class PinView extends AppCompatEditText {
         updateRoundRectPath(mItemLineRect, mPinItemRadius, mPinItemRadius, l, r);
         canvas.drawPath(mPath, mPaint);
     }
+/*    private void drawPinCircle(){
+      Canvas canvas = document.getElementById('canvas');
+        if (canvas.getContext) {
+    const ctx = canvas.getContext('2d');
+
+    const rectangle = new Path2D();
+            rectangle.rect(10, 10, 50, 50);
+
+    const circle = new Path2D();
+            circle.arc(100, 35, 25, 0, 2 * Math.PI);
+
+            ctx.stroke(rectangle);
+            ctx.fill(circle);
+        }
+    }*/
 
     private void drawCursor(Canvas canvas) {
         if (drawCursor) {
@@ -585,6 +592,12 @@ public class PinView extends AppCompatEditText {
 
     private void drawText(Canvas canvas, int i) {
         Paint paint = getPaintByIndex(i);
+        // 1, Rect(4, -39, 20, 0)
+        // 您, Rect(2, -47, 51, 3)
+        // *, Rect(0, -39, 23, -16)
+        // =, Rect(4, -26, 26, -10)
+        // -, Rect(1, -19, 14, -14)
+        // +, Rect(2, -32, 29, -3)
         drawTextAtBox(canvas, paint, mTransformed, i);
     }
 
