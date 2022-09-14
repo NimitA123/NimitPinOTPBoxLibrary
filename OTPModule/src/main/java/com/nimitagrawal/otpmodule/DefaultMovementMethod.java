@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.otpmodule;
+package com.nimitagrawal.otpmodule;
 
 import android.text.Selection;
 import android.text.Spannable;

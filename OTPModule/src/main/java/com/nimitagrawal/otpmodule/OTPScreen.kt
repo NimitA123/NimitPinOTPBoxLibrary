@@ -1,16 +1,13 @@
-package com.example.otpmodule
+package com.nimitagrawal.otpmodule
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.otpmodule.R
 
 class OTPScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_otpscreen)
-        val pinView = findViewById<PinView>(R.id.pin_view)
 
-        pinView.setOnClickListener {
-
-        }
     }
 }

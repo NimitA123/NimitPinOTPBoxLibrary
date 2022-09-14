@@ -1,4 +1,4 @@
-package com.example.otpmodule
+package com.nimitagrawal.otpmodule
 
 import org.junit.Test
 

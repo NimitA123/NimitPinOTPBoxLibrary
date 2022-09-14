@@ -5,7 +5,7 @@
       <map>
         <entry key="../../../../layout/custom_preview.xml" value="0.335" />
         <entry key="OTPModule/src/main/res/drawable/pv_invisible_image.xml" value="0.1155" />
-        <entry key="OTPModule/src/main/res/layout/activity_otpscreen.xml" value="0.375" />
+        <entry key="OTPModule/src/main/res/layout/activity_otpscreen.xml" value="0.75" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
       </map>
     </option>
